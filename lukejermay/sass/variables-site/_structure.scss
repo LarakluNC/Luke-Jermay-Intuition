@@ -1,0 +1,63 @@
+$size__site-main: 100%;
+$size__site-sidebar: 25%;
+
+$parallax-offset: 30vh;
+$content-offset: 40vh;
+$transition-speed: 1.2s;
+$slide-number: 9;
+
+@mixin transition($time, $property: all, $easing: ease-in) {
+    transition: $property $time $easing;
+}
+
+body.home {
+	scroll-behavior: smooth;
+	letter-spacing: 2px;
+}
+
+body {
+	scroll-behavior: smooth;
+	letter-spacing: 2px;
+	overflow-x: hidden;
+	max-width: 100vw;
+}
+
+header.section {
+	height: 100vh;
+	width: 100vw;
+	position: relative;
+	overflow: hidden;
+	min-height: 400px;
+}
+
+section.section {
+	height: 80vh;
+	width: 100vw;
+	position: relative;
+	overflow: hidden;
+	max-width: 100vw;
+}
+
+.wrapper, .content-wrapper {
+	max-width: 1200px;
+	height: 100%;
+	margin: 0 auto;	
+	z-index: 2;
+	padding: 0 1em;
+}
+
+
+.background-image-layer {
+	position: absolute;
+	z-index: -1;
+	height: 100%;
+	width: 50vw;
+	top: 0;
+}
+.content-wrapper {
+	overflow-x: hidden;
+}
+.half {
+	width:50%;
+	height: 100%;
+}
