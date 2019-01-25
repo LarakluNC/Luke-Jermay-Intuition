@@ -1,0 +1,11 @@
+$size__site-main: 100%;
+$size__site-sidebar: 25%;
+
+body {
+	scroll-behavior: smooth;
+}
+
+.wrapper {
+	max-width: 1180px;
+	margin: 0 auto;
+}

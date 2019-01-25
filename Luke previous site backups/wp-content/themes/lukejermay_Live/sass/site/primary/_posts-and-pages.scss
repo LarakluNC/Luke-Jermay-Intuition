@@ -1,0 +1,398 @@
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+.background-image-layer {
+	position: absolute;
+	width: 100%;
+	height: auto;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+}
+
+/************************
+*						*
+*						*
+*	HOMEPAGE STYLES		*
+*						*
+*						*
+************************/
+
+.home {
+	section {		
+		position: relative;
+		height: 100vh;
+		width: 100vw;
+		overflow: hidden;
+		.half {
+			width: 50%;
+			position: relative;
+			&.two {
+				border-left: 1px solid rgba(255,255,255,0.75);
+			}
+		}
+		#show_bg_two {
+			border-left: 1px solid rgba(255,255,255,0.75);
+		}
+	}
+	
+	header#masthead {
+		position: relative;
+		height: 100vh;
+		width: 100vw;
+		overflow: hidden;
+		
+		.background-image-layer.header_masthead {
+			background:#000000 url("/wp-content/themes/lukejermay/images/header-mobile-bg.jpg") no-repeat center bottom /cover;
+			height: 600px;
+		}
+		
+		.site-branding {
+			height: 30vh;
+			margin-top: 15vh;
+			display: flex;
+			flex-direction: row;
+			
+			.left-title {
+				left: 0;
+				span {
+					transform: rotate(270deg) translateY(-50%);
+					left: -30px;
+				}
+			}
+			
+			.centre-title {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				width: 70%;
+				
+				.title-wrapper {
+					position: relative;
+					display: block;
+					width: 100%;
+					text-align: center;
+					top: 35%;
+					transform: translateY(-50%);
+					
+					& > * {
+						margin: 0;
+					}
+
+					/*.top-line {
+						top: 10px;
+					}*/
+
+					h2 {
+						width: 100%;
+						display: block;
+						letter-spacing: 3px;
+						text-transform: uppercase;
+						#m-rot {
+							transform: rotate(-90deg);
+						}
+						#e-rot {
+							transform: rotate(90deg);
+						}
+					}
+
+					.bottom-line {
+						#left-line-title {
+							margin-right: 10px;
+							position: relative;
+							top: -3px;
+						}
+						#right-line-title {
+							margin-left: 10px;
+							position: relative;
+							top: -3px;
+						}
+					}
+
+					.top-line, .bottom-line {
+						position: relative;
+						display: block;
+						text-transform: uppercase;
+					}
+				}
+				
+			}
+			
+			.right-title {
+				right: 0;
+				span {
+					transform: rotate(90deg) translateY(-50%);
+					right: -30px;
+					margin: 0 8px 0 0;
+				}
+			}
+			
+			.left-title, .right-title {
+				width: 15%;
+				position: relative;
+				display: flex;
+				height: 100%;
+				
+				span {
+					text-transform: uppercase;
+					white-space: nowrap;
+					display: block;
+					height: 30px;
+					position: absolute;
+					top: 50%;
+				}
+			}
+		}
+	}
+	
+	#trailer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		height: 80vh;
+		
+		.background-image-layer.trailer_bg {		
+			background:#000000 url("/wp-content/themes/lukejermay/images/video-bg.jpg") no-repeat center bottom /cover;
+			height: 100%;
+		}
+		
+		.full {
+			top: 30%;
+			position: relative;
+			display: block;
+		}
+		
+		.play-trailer {
+			border: dotted #fff 4px;
+			border-radius: 100%;
+			display: flex;
+			font-size: 1.5em;
+			text-decoration: none;
+			-webkit-transition: -webkit-transform 0.8s ease-in-out;
+			transition: transform 0.8s ease-in-out;
+			width: 150px;
+			height: 150px;
+			justify-content: center;
+			flex-direction: column;
+			text-align: center;
+			margin-top: 0;
+			
+			&:hover {
+			  -webkit-transform: rotate(360deg);
+					  transform: rotate(360deg);
+			}
+		}
+	}
+	#show {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		height: 80vh;
+		
+		.full {
+			top: 40%;
+			transform: translateY(-50%);
+			position: relative;
+			display: block;
+		}
+	
+		#show_one {
+			max-width: 480px;
+		}
+	
+		.background-image-layer.show_bg_l {		
+			background:url("/wp-content/themes/lukejermay/images/show-bg-l.jpg") no-repeat right bottom;
+			height: 100%;
+			width: 50%;
+			background-size: contain;
+		}
+	
+		.background-image-layer.show_bg_r {		
+			background:url("/wp-content/themes/lukejermay/images/show-bg-r.jpg") no-repeat left bottom;
+			height: 100%;
+			width: 50%;
+			right: 0;
+			left: 50%;
+			background-size: contain;
+		}
+	}
+	#split-img {
+		display: flex;
+		flex-direction: row;
+		height: 90vh;
+		
+		.background-image-layer.split_img_bg_l {			
+			background:url("/wp-content/themes/lukejermay/images/split-img-bg-l.jpg") no-repeat right bottom;
+			height: 100%;
+			width: 80%;
+			background-size: contain;
+			position: relative;
+			float: right;
+		}
+		
+		.background-image-layer.split_img_bg_r {
+			background:url("/wp-content/themes/lukejermay/images/split-img-bg-r.jpg") no-repeat left bottom;
+			height: 100%;
+			width: 80%;
+			background-size: contain;
+			position: relative;
+			float: left;
+		}
+	}
+	#experience {
+		display: flex;
+		flex-direction: row;
+		
+		.half {			
+			.exp_slider {
+				top: 66%;
+				position: relative;
+				display: block;
+				max-width: 380px;
+				text-align: center;
+				margin: 0 auto;
+			}
+			
+			.background-image-layer.experience_bg_l {
+				background:#000000 url("/wp-content/themes/lukejermay/images/experience-bg-l.jpg") no-repeat center bottom;
+				height: 100%;
+				mix-blend-mode: hard-light;
+			}
+			
+			.background-image-layer.experience_bg_r {
+				background:#000000 url("/wp-content/themes/lukejermay/images/experience-bg-r.jpg") no-repeat center bottom;
+				height: 100%;
+			}
+		}
+	}
+	#venue {
+		display: flex;
+		flex-direction: row;
+		.half {		
+			
+			&.two {
+				background: rgba(0,0,0,0.4);
+				
+				.venue_wrap {
+					top: 40%;
+					position: relative;
+					display: block;
+					max-width: 380px;
+					text-align: center;
+					margin: 0 auto;
+				}
+			}
+		}
+		.background-image-layer.venue_bg {
+			background: #000000 url("/wp-content/themes/lukejermay/images/venue-bg.jpg") no-repeat center bottom /cover;
+			height: 100%;
+			width: 100%
+		}
+	}
+	#testimonial {
+		display: flex;
+		flex-direction: row;
+		
+		.half {			
+			.test-slider {
+				top: 66%;
+				position: relative;
+				display: block;
+				max-width: 380px;
+				text-align: center;
+				margin: 0 auto;
+			}
+			
+			.rules {
+				top: 50%;
+				position: relative;
+				display: block;
+				max-width: 380px;
+				text-align: center;
+				margin: 0 auto;
+				span {
+					display: flex;
+					padding: 1em;
+					border: solid;
+					border-radius: 100%;
+					width: 100px;
+					height: 100px;
+					align-items: center;
+					justify-content: center;
+					margin: 0 auto;
+				}
+				p {
+					font-size: 1.2em;
+					max-width: 250px;
+					margin: 1.6em auto;
+				}
+			}
+			
+			.background-image-layer.testimonial_bg_l {
+				background:#000000 url("/wp-content/themes/lukejermay/images/testimonial-bg-l.jpg") no-repeat right bottom;
+				height: 100%;
+				width: 50%;
+				background-size: contain;
+				left: 50%;
+				top: 85%;
+			}
+			
+			.background-image-layer.testimonial_bg_r {
+				background:#000000 url("/wp-content/themes/lukejermay/images/testimonial-bg-r.jpg") no-repeat left bottom;
+				height: 100%;
+				width: 50%;
+				background-size: contain;
+			}
+		}
+	}
+}
+@media only screen and (min-width:768px) {
+	.home {
+		header#masthead {
+			
+			.background-image-layer.header_masthead {
+				background:#000000 url("/wp-content/themes/lukejermay/images/header-bg.jpg") no-repeat center bottom /cover;
+				height: 100%;
+			}
+			.site-branding {
+				margin-top: 30vh;
+				
+				.centre-title {
+					
+					.title-wrapper {
+						
+						/*.top-line {
+							top: 20px;
+						}*/
+						.bottom-line {
+							margin-top: 1.25em;
+						}
+					}
+				}
+				
+			}
+		}
+	}
+}
